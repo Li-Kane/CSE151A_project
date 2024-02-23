@@ -1,5 +1,6 @@
 # CSE151A_project
-Repository containing the final group project code for CSE151A
+Repository containing the final group project code for CSE151A  
+**Members:** Lorentz Tuazon, Shijun Lun, Javier De La Cruz Zuniga, Rocky Hankin, Kane Li, Wesley Kiang, Su Aye, Asher James
 
 # Citations
 The Diabetes Dataset:

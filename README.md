@@ -7,7 +7,20 @@ The Diabetes Dataset:
 Beata Strack, Jonathan P. DeShazo, Chris Gennings, Juan L. Olmo, Sebastian Ventura, Krzysztof J. Cios, and John N. Clore, “Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records,” BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014.
 
 # Milestone 3
-We did linear regression... 
+
+**Model Evaluation**  
+Since we are attempting to predict days in hospital, which is an int, we decided to start with linear regression. When we evaluated our model's performance, even though the Train and Test were relatively the same, the model accuracy wasn't very good. To see if this was overfitting or underfitting, we tried using polynomial regression and saw that even though a degree of 2 is marginally better, the results are much the same. Therefore, it can be concluded that the current structure and data aren't well suited to the task. For future improvements, we can try to expand our dataset (such as readd dropped columns), or perhaps use bagging, where we build models of different polynomial degrees or data and take the mean of their predictions.
+```
+Linear Regression Model evaluation:
+Train MSE:  6.788051615805185
+Train Standard Deviation:  2.60538895666701
+Test MSE:  6.859473380135014
+Test Standard Deviation:  2.618915481159026
+```
+
+**Future Models**  
+The first future model we plan on trying is to use a classic ANN/DNN the output range only ranges between 1-14 (14 classes), which is relatively narrow. Doing so will allow us to make our model much more complex with many more different combinations of layer sizes, depth, activation functions, and more.  
+Our second future model plan is to use another regression model, likely polynomial or ridge regression. Even though we used polynomial regression to test how our linear regressor was working, there is much to expand upon with an improved dataset. However, since it is very similar to linear regression and what we have done so far, we may also try another form of regression such as ridge or lasso.
 
 # Milestone 2
 The task we want to perform with the above dataset is to predict the duration of a diabetes patient in the hospital. 

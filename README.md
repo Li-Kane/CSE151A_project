@@ -1,7 +1,6 @@
 # CSE151A_project
 Repository containing the final group project code for CSE151A  
 **Members:** Lorentz Tuazon, Shijun Lun, Javier De La Cruz Zuniga, Rocky Hankin, Kane Li, Wesley Kiang, Su Aye, Asher James  
-**Link:**
 <a target="_blank" href="https://colab.research.google.com/github/Li-Kane/CSE151A_project/blob/main/CSE151A_Project.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>

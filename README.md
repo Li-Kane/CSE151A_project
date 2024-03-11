@@ -14,8 +14,8 @@ In this milestone, we reflect on our first model and create a second one trying 
 
 **Evaluate your data, labels and loss function. Were they sufficient or did you have have to change them?** <br>
     Using MSE for our data last time seemed reasonable given we were doing linear regression. Taking the square root of the MSE indicates our average prediction was two days off the actual result, which seems fine but we'd like to do better. We'll try some other loss functions and manipulating our data a bit as we proceed. 
-Train your second model
 
+**Train your second model** <br>
 Having already tried linear and polynomial regression and been dissatisfied, we're going to move up in complexity with a neural network. It's pretty clear to us that we were underfitting if anything. We tried a lot of different combinations for our neural network, with different amounts of neurons and optimizers and activation functions. For readability we've trimmed a lot of fat, a lot of the many models we've tried, also because they were spread across different group member's notebooks. We also tried a version where we converted y_test to a one-hot encoding since there were only 14 possible values for it in the dataset, and did categorical cross-entropy with that.
 
 **Evaluate your model compare training vs test error** <br>

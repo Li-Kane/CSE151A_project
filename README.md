@@ -9,6 +9,32 @@ Repository containing the final group project code for CSE151A
 The Diabetes Dataset:
 Beata Strack, Jonathan P. DeShazo, Chris Gennings, Juan L. Olmo, Sebastian Ventura, Krzysztof J. Cios, and John N. Clore, “Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records,” BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014.
 
+# Milestone 4
+In this milestone, we reflect on our first model and create a second one trying to improve on it in order to answer the following questions.
+
+**Evaluate your data, labels and loss function. Were they sufficient or did you have have to change them?** <br>
+    Using MSE for our data last time seemed reasonable given we were doing linear regression. Taking the square root of the MSE indicates our average prediction was two days off the actual result, which seems fine but we'd like to do better. We'll try some other loss functions and manipulating our data a bit as we proceed. 
+Train your second model
+
+Having already tried linear and polynomial regression and been dissatisfied, we're going to move up in complexity with a neural network. It's pretty clear to us that we were underfitting if anything. We tried a lot of different combinations for our neural network, with different amounts of neurons and optimizers and activation functions. For readability we've trimmed a lot of fat, a lot of the many models we've tried, also because they were spread across different group member's notebooks. We also tried a version where we converted y_test to a one-hot encoding since there were only 14 possible values for it in the dataset, and did categorical cross-entropy with that.
+
+**Evaluate your model compare training vs test error** <br>
+    Our models don't preform any better than the linear/polynomial regression we did last time. "Given my condition, how long will I be in the hospital for?" Our test MSE isn't much different from our previous models. In the last step we found a degree three polynomial was the most effective and none of our models have beaten it, only equaled it roughly. We appear stuck around the 6.5 mse (or 22% accuracy when we do categorical crossentropy). On the brightside, the gap between our training MSE and testing MSE remained about the same and pretty small, so we don't appear to be overfitting.
+
+I think it's important to ask ourselves "what does 6.5 mse even mean?" Because that's pretty abstract. So what we did is we took one of our better models and plotted all the test set predictions on a scatterplot based on their error. The error not being the mean squared error, just the distance between the truth and the prediction. What we found is that for our massive dataset, the vast vast majority of our predictions fall within a couple days of the actual result. around 0-2.5 days. That's not so bad. But we would like to do better and try to narrow that down even more. 
+
+**Where does your model fit in the fitting graph, how does it compare to your first model?** <br>
+    Adding neurons and testing different activation functions had little effect on the output. We seemed stuck around the same 6.5ish mse, or 22% accuracy when we did categorical classification. So its tempting to say its in the same place as before. So far we've only seen overfitting with degree 4 polynomial regression in the last milestone. 
+Did you perform hyper parameter tuning? K-fold Cross validation? Feature expansion? What were the results?
+
+We did not for this milestone. We accomplished something similar to hyper parameter tuning by just trying a bunch of different stuff manually but not to the same scale or thoroughness. It didn't have any good results, really. Like we've said, we can't seem to break past the 6.5 mse we started with. A lot of things didn't make it worse, but that's all we can say about them.
+
+**What is the plan for the next model you are thinking of and why?** <br>
+    Scaling up complexity hasn't helped much, so we're thinking about maybe aggregating. We have a lot of models that all function 'ok,' so we could aggregate their predictions like we've seen in class. Hopefully their predictions are different in a way that their average converges towards the truth.
+
+**Conclusion section: What is the conclusion of your 2nd model? What can be done to possibly improve it? How did it perform to your first and why?** <br>
+    While we didn't get signs of overfitting, our problem just isn't much more complicated than a linear/polynomial regression. We're using a bunch of values to try and weight them and get a single value. Upping complexity doesn't seem to help. We're also dealing with low correlation between our features and target to begin with, so its unclear what the peak accuracy we're shooting for is. Still, we've learned a lot of things in class that we can try for our final submission.
+
 # Milestone 3
 
 **Model Evaluation**  

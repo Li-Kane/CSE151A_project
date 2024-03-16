@@ -74,3 +74,5 @@ Shijun - Data preprocessing and writeup.
 Rocky - Data exploration, model 2, and writeup.
 
 Javier - 
+
+Su - 

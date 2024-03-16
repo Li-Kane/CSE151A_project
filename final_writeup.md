@@ -64,7 +64,6 @@ Model 3 includes a decision tree classifier and a decision tree regressor. For t
 For all 3 models, we are getting a MSE around 6.5, which indicates our models do not have great performance. This could potentially be the limitation of the dataset. Nonetheless, considering our task does not rely on an accurate prediction, our models can provide a rough suggestion on the time of stay for diabetes patients. 
 
 ## Conclusion
-Conclusion section: This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts
 
 At the end of the day, our model had a typical error of within +/-2.5 days of the truth, and while our attempts to improve it didn't make it much worse, it didn't get much better either. I think if I asked a doctor "how long will I be in here" and he could guess within 2.5 days the length of my stay, I'd be pretty happy with that answer and our data wasn't very correlated to start with, but its frustrating to fail to improve it after multiple tries.
 

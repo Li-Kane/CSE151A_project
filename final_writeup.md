@@ -55,7 +55,4 @@ For all 3 models, we are getting a MSE around 6.5, which indicates our models do
 
 ## Collaboration
 
-10. Conclusion
-11. Collaboration
-
 ## Collaboration

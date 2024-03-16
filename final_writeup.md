@@ -38,21 +38,39 @@ For our third model we utilized the imbalanced learn
 ## Results
 
 **model 1 results**
+Overall, the best MSE for our linear and polynomial regression model using OLS was around 6.56 on the test, for a standard deviation of around 2.56 days on our model predictions. Increasing the degree of the polynomial improved the performance a little but eventually caused overfitting at degree four. Degree 3 gave us the best results. 
+
+**model 2 results**
+Our neural network achieved similar MSE to our linear/polynomial models when used for regression. When we used it for categorical classification by one-hot encoding y, we reached 22% accuracy with an MSE of around 6.3 when we multiply the probability predictions by the days of each class. 
+
+**model 3 results**
+The decision tree model had a best MSE of 6.711323110010316. Even when we were to use the entire dataset without dropping columns, MSE at the lowest was around 4, for a standard deviation of 2 days on the model error and a classification accuracy of up to 27%, decision tree with entire data had MSE of ~5.4.
+
+
+## Discussion
+
+**model 1 discussion**
 
 Model 1 is set to perform linear regression and polynomial regression. Linear regression produced a MSE of 6.76 on the test subset. Polynomial regression is then used to evaluate the model performance by examining potential underfitting and overfitting. Polynomial regression of degree 2 has the best MSE value of 6.56 on the test subset. Since we are predicting the length of stay in days for a diabetes patient, linear regression and polynomial regression evaluate the correlation between the input features and the out target. The resulting MSE can be used as a reference in helping evaluate other models. The performance of linear regression and polynomial regression models shows a low correlation between the input features and the out target.
 
-**model 2 results**
+**model 2 discussion**
 
 Model 2 is a neural network sequential classifier. To address the low correlation problem elevated by model 1, we choose to build a neural network. Neural network functions to determine a suitable weight for each input feature. We build the neural network to increase the weight of more prominent features in seeking a better model performance. However, we are still only able to get a MSE of 6.59. We further examine the result. The predicted result has an average error of  ± 2 days, and, by visualizing the error, the majority of the predicted result has an error within the range of ± 2.5 days. In accomplishing our task, the result was not unacceptable if the result is only used for a suggestion.
 
-**model 3 results**
+**model 3 discussion**
 
 Model 3 includes a decision tree classifier and a decision tree regressor. For the decision tree classifier, we are expecting an inferior performance as our predicting target does not have a good affinity with the classifier, yet we still build the classifier for a reference in evaluating other models. As expected, the decision tree classifier resulted in a MSE of 11.62. For the decision tree regressor, the MSE on the test subset is 6.71. 
 
 For all 3 models, we are getting a MSE around 6.5, which indicates our models do not have great performance. This could potentially be the limitation of the dataset. Nonetheless, considering our task does not rely on an accurate prediction, our models can provide a rough suggestion on the time of stay for diabetes patients. 
 
-## Discussion
-
 ## Collaboration
 
-## Collaboration
+Lorentz (dropped the class, but we're crediting him) - data verification in milestone 2.
+
+Asher - Data preprocessing in milestone two. Leadership and organization.
+
+Shijun - Data preprocessing and writeup.
+
+Rocky - Data exploration, model 2, and writeup.
+
+Javier - 

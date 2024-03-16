@@ -59,13 +59,16 @@ Model 2 is a neural network sequential classifier. To address the low correlatio
 
 **model 3 discussion**
 
-Model 3 includes a decision tree classifier and a decision tree regressor. For the decision tree classifier, we are expecting an inferior performance as our predicting target does not have a good affinity with the classifier, yet we still build the classifier for a reference in evaluating other models. As expected, the decision tree classifier resulted in a MSE of 11.62. For the decision tree regressor, the MSE on the test subset is 6.71. 
+Model 3 includes a decision tree classifier and a decision tree regressor. For the decision tree classifier, we are expecting an inferior performance as our predicting target does not have a good affinity with the classifier, yet we still build the classifier for a reference in evaluating other models. As expected, the decision tree classifier resulted in a MSE of 11.62. For the decision tree regressor, the MSE on the test subset is 6.71.
 
 For all 3 models, we are getting a MSE around 6.5, which indicates our models do not have great performance. This could potentially be the limitation of the dataset. Nonetheless, considering our task does not rely on an accurate prediction, our models can provide a rough suggestion on the time of stay for diabetes patients. 
 
 ## Conclusion
+Conclusion section: This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts
 
+At the end of the day, our model had a typical error of within +/-2.5 days of the truth, and while our attempts to improve it didn't make it much worse, it didn't get much better either. I think if I asked a doctor "how long will I be in here" and he could guess within 2.5 days the length of my stay, I'd be pretty happy with that answer and our data wasn't very correlated to start with, but its frustrating to fail to improve it after multiple tries.
 
+One thing we could have done better is we made a lot of decisions regarding what we'd predict and what features we used at the start, and then we ended up with all these low correlation features. We would've liked to check the whole data set's correlation with our target rather than cutting so much stuff out first.
 
 ## Collaboration
 
@@ -80,3 +83,5 @@ Rocky - Data exploration, model 2, and writeup.
 Javier - 
 
 Su - 
+
+Wesley - 

@@ -79,7 +79,7 @@ Shijun - Data preprocessing and writeup.
 
 Rocky - Data exploration, model 2, and writeup.
 
-Javier - 
+Javier - Model 2, Introduction, and Methods 
 
 Su - Neural Network Models, Decision Tree Regressor, and write up.
 

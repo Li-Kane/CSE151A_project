@@ -90,4 +90,4 @@ Javier - Model 2, Introduction, and Methods
 
 Su - Neural Network Models, Decision Tree Regressor, and write up.
 
-Wesley - 
+Wesley - Data preprocessing, model 2, model 3.

@@ -81,6 +81,6 @@ Rocky - Data exploration, model 2, and writeup.
 
 Javier - 
 
-Su - 
+Su - Neural Network Models, Decision Tree Regressor, and write up.
 
 Wesley - 

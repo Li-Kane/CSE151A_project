@@ -37,7 +37,7 @@ For our second model we used a neural network and tuned it with various activati
 
 **model 3 methods**
 
-For our third model we utilized the imbalanced learn
+For our third model we utilized a Decision Tree Regressor using Grid Search with cross-validation. It searches for the best combination of hyperparameters specified in the param_grid dictionary, evaluates them using negative mean squared error, and outputs the best parameters along with the mean squared training error.
 
 ## Results
 

@@ -63,6 +63,10 @@ Model 3 includes a decision tree classifier and a decision tree regressor. For t
 
 For all 3 models, we are getting a MSE around 6.5, which indicates our models do not have great performance. This could potentially be the limitation of the dataset. Nonetheless, considering our task does not rely on an accurate prediction, our models can provide a rough suggestion on the time of stay for diabetes patients. 
 
+## Conclusion
+
+
+
 ## Collaboration
 
 Lorentz (dropped the class, but we're crediting him) - data verification in milestone 2.

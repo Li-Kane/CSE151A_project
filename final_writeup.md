@@ -9,9 +9,7 @@ It is important to have a good predictive model so that hospitals can more accur
 
 ## 3.) All code uploaded in the form of jupyter notebooks that can be easily followed along to your GitHub repo
 
-## 4.) A completed write that includes the following
-2. Figures
-3. Methods
+
 # **Methods**
 
 In this section, we will go over the various techniques used for preprocessing, data exploration, and building our models.
@@ -44,11 +42,13 @@ For our third model we utilized the imbalanced learn
 
 5. Results
 
-Overall, the best MSE for our linear and polynomial regression model using OLS was around 6.56 on the test, for a standard deviation of around 2.56 days on our model predictions. Our classification model could reach up to 22% with an MSE of around 6.3 when we multiply the probability predictions by the days of each class. The decision tree model had a best MSE of 6.711323110010316. Even when we were to use the entire dataset without dropping columns, MSE at the lowest was around 4, for a standard deviation of 2 days on the model error and a classification accuracy of up to 27%, decision tree with entire data had MSE of ~5.4
+Overall, the best MSE for our linear and polynomial regression model using OLS was around 6.56 on the test, for a standard deviation of around 2.56 days on our model predictions. Our classification model could reach up to 22% accuracy with an MSE of around 6.3 when we multiply the probability predictions by the days of each class. The decision tree model had a best MSE of 6.711323110010316. Even when we were to use the entire dataset without dropping columns, MSE at the lowest was around 4, for a standard deviation of 2 days on the model error and a classification accuracy of up to 27%, decision tree with entire data had MSE of ~5.4.
 
 8. Discussion
-9. Conclusion
-10. Collaboration
+
+
+10. Conclusion
+11. Collaboration
 
 ## 5.) Your final model (model 3) and final results summary (this should be the last paragraph in D)
 

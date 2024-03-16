@@ -5,11 +5,6 @@ Predicting the time a diabetes patient will stay at a hospital is an important a
 
 It is important to have a good predictive model so that hospitals can more accurately allocate resources, such as beds, medications, and staff for better patient care. Failure to provide proper diabetes care not only increases the managing costs for the hospitals (as the patients are readmitted) but also impacts the morbidity and mortality of the patients, who may face complications associated with diabetes. This model can have various applications, including preventative care, cost management, resource optimization, and overall healthcare efficiency.
 
-## 2.) A complete submission of all prior submissions
-
-## 3.) All code uploaded in the form of jupyter notebooks that can be easily followed along to your GitHub repo
-
-
 # **Methods**
 
 In this section, we will go over the various techniques used for preprocessing, data exploration, and building our models.

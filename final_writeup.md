@@ -43,14 +43,44 @@ For our third model we utilized a Decision Tree Regressor using Grid Search with
 
 **model 1 results**
 Overall, the best MSE for our linear and polynomial regression model using OLS was around 6.56 on the test, for a standard deviation of around 2.56 days on our model predictions. Increasing the degree of the polynomial improved the performance a little but eventually caused overfitting at degree four. Degree 3 gave us the best results.  
+```
+Degree:  0
+Train MSE:  8.925794495723292
+Test MSE:  8.906393860761339
+Degree:  1
+Train MSE:  6.813329926491826
+Test MSE:  6.759093339002649
+Degree:  2
+Train MSE:  6.619261370004652
+Test MSE:  6.5568623285037875
+Degree:  3
+Train MSE:  6.537754012184603
+Test MSE:  6.563053350348246
+Degree:  4
+Train MSE:  6.450946593071605
+Test MSE:  19060328.207478154
+```
 <img src="/images/linear-poly-loss.png" width="400" />
 
 **model 2 results**
 Our neural network achieved similar MSE to our linear/polynomial models when used for regression. When we used it for categorical classification by one-hot encoding y, we reached 22% accuracy with an MSE of around 6.3 when we multiply the probability predictions by the days of each class.  
+```
+// classification model 1
+622/622 [==============================] - 2s 3ms/step - loss: 2.1354 - acc: 0.2136
+test accuracy:  0.21357856690883636
+
+// classification model 2
+622/622 [==============================] - 1s 2ms/step
+mse:  6.528266924907395
+```
 <img src="/images/model-loss.png" width="400" />
 
 **model 3 results**
-The decision tree model had a best MSE of 6.711323110010316. Even when we were to use the entire dataset without dropping columns, MSE at the lowest was around 4, for a standard deviation of 2 days on the model error and a classification accuracy of up to 27%, decision tree with entire data had MSE of ~5.4.  
+The decision tree model had a best MSE of 6.711323110010316. Even when we were to use the entire dataset without dropping columns, MSE at the lowest was around 6, for a standard deviation of ~2.5 days on the model error and a classification accuracy of up to 24%, decision tree with entire data had MSE of ~6 as well.  
+```
+Best params: {'max_depth': 6, 'min_samples_leaf': 1, 'min_samples_split': 10}
+Mean Squared Training Error Decision Tree Regressor: 6.701541349151196
+```
 <img src="/images/precision-recall.png" width="400" />
 
 
@@ -72,9 +102,9 @@ For all 3 models, we are getting a MSE around 6.5, which indicates our models do
 
 ## Conclusion
 
-At the end of the day, our model had a typical error of within +/-2.5 days of the truth, and while our attempts to improve it didn't make it much worse, it didn't get much better either. I think if I asked a doctor "how long will I be in here" and he could guess within 2.5 days the length of my stay, I'd be pretty happy with that answer and our data wasn't very correlated to start with, but its frustrating to fail to improve it after multiple tries.
+At the end of the day, our model had a typical error of within +/-2.5 days of the truth, and while our attempts to improve it didn't make it much worse, it didn't get much better either. I think if I asked a doctor "how long will I be in here" and he could guess within 2.5 days the length of my stay, I'd be pretty happy with that answer and our data wasn't very correlated to start with, but its frustrating to fail to improve it after multiple tries. Given that even when we tried to utilize the dataset without dropping any features we still had approximately the same performance, the problem is likely to due with the type of data and what we are trying to predict rather than how much data we have (~100,000 rows, 47 features). Not only this, but even when we boosted the model as much as possible, we couldn't even get it to overfit on just the training data, suggesting an issue with the data or correlations. There may even be an issue with data collection. 
 
-One thing we could have done better is we made a lot of decisions regarding what we'd predict and what features we used at the start, and then we ended up with all these low correlation features. We would've liked to check the whole data set's correlation with our target rather than cutting so much stuff out first.
+One thing we could have done better is we made a lot of decisions regarding what we'd predict and what features we used at the start, and then we ended up with all these low correlation features. We would've liked to check the whole data set's correlation with our target rather than cutting so much stuff out first. In the future, we could try to utilize a different dataset, oversample our data (since error was higher on higher days), or be more selective with the features we use. Overall, even if the accuracy wasn't as optimal as we would have liked, we learned a lot about the importance of good dataa and data preprocessing and selecting the right models for the task.
 
 ## Collaboration
 
@@ -91,3 +121,5 @@ Javier - Model 2, Introduction, and Methods
 Su - Neural Network Models, Decision Tree Regressor, and write up.
 
 Wesley - Data preprocessing, model 2, model 3.
+
+Kane - Writeups, figures, preprocessing, model 1, organization.
